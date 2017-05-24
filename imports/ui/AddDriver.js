@@ -5,19 +5,22 @@ import { Drivers } from './../api/drivers';
 export default class AddDriver extends React.Component {
   handleSubmit(e) {
     let firstName = e.target.firstName.value;
-    let vehicle = e.target.vehicle.value;
+    let vehicleColor = e.target.vehicleColor.value;
+    let vehicleModel = e.target.vehicleModel.value;
     let seats = e.target.seats.value;
 
     e.preventDefault();
 
-    if (firstName && vehicle && seats) {
+    if (firstName && vehicleColor && vehicleModel && seats) {
       e.target.firstName.value = '';
-      e.target.vehicle.value = '';
+      e.target.vehicleColor.value = '';
+      e.target.vehicleModel.value = '';
       e.target.seats.value = '';
 
       Drivers.insert({
         name: firstName,
-        vehicle: vehicle,
+        vehicleColor: vehicleColor,
+        vehicleModel: vehicleModel,
         seats: seats
       });
     }
@@ -27,7 +30,8 @@ export default class AddDriver extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input type="text" name="firstName" placeholder="First name here"/>
-          <input type="text" name="vehicle" placeholder="Vehicle"/>
+          <input type="text" name="vehicleColor" placeholder="Vehicle's Color"/>
+          <input type="text" name="vehicleModel" placeholder="Vehicle's Model"/>
           <input type="number" name="seats" placeholder="Seats available"/>
           <button>Add Driver</button>
         </form>

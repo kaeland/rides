@@ -10,9 +10,14 @@ Drivers.attachSchema(
       label: "Name",
       optional: false
     },
-    vehicle: {
+    vehicleColor: {
       type: String,
-      label: "Vehicle",
+      label: "Vehicle Color",
+      optional: false
+    },
+    vehicleModel: {
+      type: String,
+      label: "Vehicle Brand",
       optional: false
     },
     seats: {
