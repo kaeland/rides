@@ -8,20 +8,23 @@ export default class AddDriver extends React.Component {
     let vehicleColor = e.target.vehicleColor.value;
     let vehicleModel = e.target.vehicleModel.value;
     let seats = e.target.seats.value;
+    let destination = e.target.destination.value;
 
     e.preventDefault();
 
-    if (firstName && vehicleColor && vehicleModel && seats) {
+    if (firstName && vehicleColor && vehicleModel && seats && destination) {
       e.target.firstName.value = '';
       e.target.vehicleColor.value = '';
       e.target.vehicleModel.value = '';
       e.target.seats.value = '';
+      e.target.destination.value = '';
 
       Drivers.insert({
         name: firstName,
         vehicleColor: vehicleColor,
         vehicleModel: vehicleModel,
-        seats: seats
+        seats: seats,
+        destination: destination
       });
     }
   }
@@ -33,6 +36,8 @@ export default class AddDriver extends React.Component {
           <input type="text" name="vehicleColor" placeholder="Vehicle's Color"/>
           <input type="text" name="vehicleModel" placeholder="Vehicle's Model"/>
           <input type="number" name="seats" placeholder="Seats available"/>
+          <br/>
+          <input type="destination" name="destination" placeholder="Enter Your Destination"/>
           <br/>
           <button>Add Driver</button>
         </form>

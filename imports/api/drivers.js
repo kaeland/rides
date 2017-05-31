@@ -29,6 +29,11 @@ Drivers.attachSchema(
       type: Object,
       label: "Riders",
       optional: true
+    },
+    destination: {
+      type: String,
+      label: "Destination",
+      optional: false
     }
   })
 );
