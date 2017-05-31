@@ -33,6 +33,7 @@ export default class AddDriver extends React.Component {
           <input type="text" name="vehicleColor" placeholder="Vehicle's Color"/>
           <input type="text" name="vehicleModel" placeholder="Vehicle's Model"/>
           <input type="number" name="seats" placeholder="Seats available"/>
+          <br/>
           <button>Add Driver</button>
         </form>
       </div>

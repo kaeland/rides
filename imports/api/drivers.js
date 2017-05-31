@@ -24,6 +24,11 @@ Drivers.attachSchema(
       type: Number,
       label: "Seats Available",
       optional: false
+    },
+    riders: {
+      type: Object,
+      label: "Riders",
+      optional: true
     }
   })
 );
