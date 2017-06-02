@@ -10,6 +10,7 @@ export default class DriverList extends React.Component {
         vehicleColor={driver.vehicleColor}
         vehicleModel={driver.vehicleModel}
         seats={driver.seats}
+        phone={driver.phone}
         riders={driver.riders}
         destination={driver.destination}/>
     });

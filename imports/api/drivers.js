@@ -10,6 +10,11 @@ Drivers.attachSchema(
       label: "Name",
       optional: false
     },
+    phone: {
+      type: Number,
+      label: "Phone",
+      optional: false
+    },
     vehicleColor: {
       type: String,
       label: "Vehicle Color",
@@ -23,12 +28,15 @@ Drivers.attachSchema(
     seats: {
       type: Number,
       label: "Seats Available",
+      min: 0,
       optional: false
     },
     riders: {
-      type: Object,
-      label: "Riders",
+      type: Array,
       optional: true
+    },
+    'riders.$': {
+      type: String
     },
     destination: {
       type: String,
